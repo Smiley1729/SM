@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="decorate.css">
+    </head>
+    <body>
+<h2>My hobbies</h2>
+<p>Listening Music</p>
+<div>
+    <p>click here to listen one of my favourite</p>
+    <img src="play1.jpg" id="icon" width="100px" length="100px">
+</div>
+<audio id="myFavourite">
+    <source src="song" type="audio/mp3">
+</audio>
+<script>
+    var myFavourite = document.getElementById("myFavourite");
+    var icon = document.getElementById("icon");
+
+    icon.onclick=function(){
+           if(myFavourite.paused) {
+            myFavourite.play();
+            icon.src="play.jpg";
+    }else{
+        myFavourite.pause();
+            icon.src="play1.jpg";
+    }
+}
+</script>
+</body>
+</html>
